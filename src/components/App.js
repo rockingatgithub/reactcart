@@ -11,6 +11,7 @@ class App extends Component {
       totalMovies: 0,
       movieList: new Array(0),
       showDetails: false,
+      initial: true,
     };
   }
 
@@ -26,6 +27,7 @@ class App extends Component {
             results: [],
           };
           this.setState({
+            initial: false,
             showList: false,
             totalMovies: 0,
             movieList: movies.results,
@@ -34,6 +36,7 @@ class App extends Component {
           console.log(movies);
         } else {
           this.setState({
+            initial: false,
             showList: true,
             totalMovies: movies.total_results,
             movieList: movies.results,
@@ -47,11 +50,15 @@ class App extends Component {
   // =============================main app component==========================================
 
   render() {
-    const { showList, movieList, totalMovies } = this.state;
+    const { showList, movieList, totalMovies, initial } = this.state;
     return (
       <div className="App">
         <div id="seacrh-bar">
           <h1 id="app-heading">WELCOME TO REACTCART </h1>
+
+          {initial && (
+            <div id="initial-message-box">Enter movie name in search bar</div>
+          )}
 
           <div id="search-box">
             <img

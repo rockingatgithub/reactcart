@@ -56,9 +56,17 @@ body {
 span {
   color: whitesmoke;
   font-family: arial;
+  margin-left: 10px;
 }
 
 .movieimage {
   border: 1px solid white;
   border-radius: 10px;
+}
+
+#initial-message-box {
+  top: 204px;
+  position: relative;
+  color: white;
+  font-size: 40px;
 }
