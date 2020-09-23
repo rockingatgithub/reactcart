@@ -38,7 +38,7 @@ body {
   background: transparent;
   border: 0px;
   font-size: 16px;
-
+  color: white;
   border-bottom: 1px solid black;
 }
 
@@ -69,4 +69,9 @@ span {
   position: relative;
   color: white;
   font-size: 40px;
+}
+
+#css-element {
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 4s; /* don't forget to set a duration! */
 }

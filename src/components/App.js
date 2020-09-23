@@ -57,7 +57,11 @@ class App extends Component {
           <h1 id="app-heading">WELCOME TO REACTCART </h1>
 
           {initial && (
-            <div id="initial-message-box">Enter movie name in search bar</div>
+            <div id="initial-message-box">
+              <h3 className="animate__animated animate__bounce" id="css-element">
+                Enter movie name in search bar
+              </h3>
+            </div>
           )}
 
           <div id="search-box">
