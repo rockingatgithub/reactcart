@@ -16,6 +16,12 @@ class Movie extends Component {
     });
   };
 
+  closeDetail = () => {
+    this.setState({
+      showDetails: false,
+    });
+  };
+
   render() {
     const { movie } = this.props;
     const { showDetails } = this.state;
@@ -27,7 +33,11 @@ class Movie extends Component {
         <div className="movieCard" onClick={this.openDetails}>
           <img
             className="movieimage"
-            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            src={
+              movie.poster_path === null
+                ? `https://www.flaticon.com/svg/static/icons/svg/1179/1179120.svg`
+                : `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+            }
             style={{ height: "200px", width: "150px" }}
             alt="movie-poster"
           />
@@ -40,6 +50,12 @@ class Movie extends Component {
 
         {showDetails && (
           <div id="showdetails">
+            <img
+              src="https://www.flaticon.com/svg/static/icons/svg/106/106830.svg"
+              style={{ height: "24px", width: "24px" }}
+              onClick={this.closeDetail}
+              alt="close button"
+            />
             <MovieDetails movie={movie} />
           </div>
         )}

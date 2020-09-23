@@ -3,6 +3,8 @@ body {
   background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
 }
 
+/* ====================================search bar design====================================================== */
+
 #seacrh-bar {
   display: flex;
   height: 60px;
@@ -42,6 +44,8 @@ body {
   border-bottom: 1px solid black;
 }
 
+/* =======================================design for search result======================================== */
+
 #movielist {
   display: flex;
   justify-content: space-between;
@@ -51,6 +55,7 @@ body {
 
 #movie-box {
   padding: 28px;
+  position: relative;
 }
 
 span {
@@ -74,4 +79,28 @@ span {
 #css-element {
   animation: bounce; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 4s; /* don't forget to set a duration! */
+}
+
+/* =======================================show movie details=========================================== */
+
+.moviename {
+  display: inline-block;
+  width: 195px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.showDetails {
+  position: absolute;
+}
+
+#showdetails {
+  position: absolute;
+  z-index: 10;
+  background: linear-gradient(to right, #20002c, #cbb4d4);
+  height: auto;
+  width: 600px;
+  padding: 10px;
+  border-radius: 28px;
+  top: 231px;
 }
