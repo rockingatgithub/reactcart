@@ -4,6 +4,8 @@ import Movie from "./Movie";
 class App extends Component {
   constructor(props) {
     super(props);
+    // =======================initial state =========================================================
+
     this.state = {
       showList: false,
       totalMovies: 0,
@@ -11,6 +13,8 @@ class App extends Component {
       showDetails: false,
     };
   }
+
+  // ================================movies search handler================================================
 
   handleSearch = async (e) => {
     let url = `https://api.themoviedb.org/3/search/movie?api_key=e08d15260b80f4fba575a381012e7ce8&query=${e.target.value}`;
@@ -39,6 +43,8 @@ class App extends Component {
         }
       });
   };
+
+  // =============================main app component==========================================
 
   render() {
     const { showList, movieList, totalMovies } = this.state;

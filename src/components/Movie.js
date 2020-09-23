@@ -8,6 +8,8 @@ class Movie extends Component {
     };
   }
 
+// ===============================handler to show movie details=====================================
+
   openDetails = () => {
     this.setState({
       showDetails: true,

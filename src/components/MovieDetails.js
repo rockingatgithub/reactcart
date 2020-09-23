@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+// ======================================component for specific movie detals==================================
 class MovieDetails extends Component {
   render() {
     const { movie } = this.props;
