@@ -9,27 +9,30 @@ class MovieDetails extends Component {
           <img
             className="movieimage"
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-            style={{ height: "500px", width: "600px" }}
+            style={{ height: "200px", width: "200px" }}
             alt="movie-poster"
           />
           <div className="firstinfo">
-            <span className="moviename">{movie.title}</span>
+            <span className="moviename">Name: {movie.title}</span>
+            <br />
             <span className="popularity">{movie.popularity}</span>
           </div>
           <div id="thirdinfo">
-            <span id="moviedate">{movie.release_date}</span>
+            <span id="moviedate">Date: {movie.release_date}</span>
             {movie.adult ? (
-              <span id="foradults"> Yes </span>
+              <span id="foradults">Adults: Yes </span>
             ) : (
-              <span id="foradults"> Yes </span>
+              <span id="foradults">Adults: No </span>
             )}
           </div>
           <div id="secondinfo">
-            <span className="rating">{movie.vote_average}/10</span>
-            <span className="totalVote">{movie.vote_count}</span>
+            <span className="rating">Rating: {movie.vote_average}/10</span>
+            <span className="totalVote">Votes: {movie.vote_count}</span>
           </div>
           <div id="movie-desc">
-            <p id="movie-ovreview">{movie.overview}</p>
+            <p id="movie-ovreview">
+              <span>{movie.overview}</span>
+            </p>
           </div>
         </div>
       </div>

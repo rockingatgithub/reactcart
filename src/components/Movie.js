@@ -19,17 +19,18 @@ class Movie extends Component {
     const { showDetails } = this.state;
 
     return (
-      <div>
+      <div id="movie-box">
         <div className="movieCard" onClick={this.openDetails}>
           <img
             className="movieimage"
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-            style={{ height: "400px", width: "400px" }}
+            style={{ height: "200px", width: "150px" }}
             alt="movie-poster"
           />
           <div className="firstinfo">
-            <span className="moviename">{movie.title}</span>
-            <span className="popularity">{movie.popularity}</span>
+            <span className="moviename">Name: {movie.title}</span>
+            <br/>
+            <span className="popularity">Popularity: {movie.popularity}</span>
           </div>
         </div>
 

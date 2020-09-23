@@ -2,3 +2,63 @@ body {
   margin: 0;
   background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
 }
+
+#seacrh-bar {
+  display: flex;
+  height: 60px;
+  margin-top: 10px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+#app-heading {
+  color: white;
+  font-size: 24px;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+#search-box {
+  position: relative;
+  width: 300px;
+  top: 10px;
+}
+
+#seacrh-icon {
+  position: absolute;
+  top: 5px;
+}
+
+#search-input {
+  display: inline-block;
+  position: absolute;
+  left: 38px;
+  height: 28px;
+  width: 215px;
+  background: transparent;
+  border: 0px;
+  font-size: 16px;
+
+  border-bottom: 1px solid black;
+}
+
+#movielist {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+#movie-box {
+  padding: 28px;
+}
+
+span {
+  color: whitesmoke;
+  font-family: arial;
+}
+
+.movieimage {
+  border: 1px solid white;
+  border-radius: 10px;
+}

@@ -45,18 +45,28 @@ class App extends Component {
     return (
       <div className="App">
         <div id="seacrh-bar">
-          <form id="search-form">
+          <h1 id="app-heading">WELCOME TO REACTCART </h1>
+
+          <div id="search-box">
+            <img
+              src="https://www.flaticon.com/svg/static/icons/svg/149/149852.svg"
+              alt="search-icon"
+              style={{ height: "20px", width: "20px" }}
+              id="seacrh-icon"
+            />
             <input
               type="text"
               name="search"
               onChange={this.handleSearch}
-              placeholder="Enter movie name"
+              placeholder="Enter movie name........"
+              id="search-input"
             />
-            <input type="submit" value="submit" />
-          </form>
+          </div>
         </div>
+        {totalMovies !== 0 && (
+          <h3 id="moviescount">{totalMovies} movies found</h3>
+        )}
         <div id="movielist">
-          {totalMovies !== 0 && <h3 id="moviescount">{totalMovies}</h3>}
           {showList &&
             movieList &&
             movieList.map((movie) => <Movie key={movie.id} movie={movie} />)}
