@@ -70,7 +70,7 @@ class App extends Component {
           </div>
         </div>
         {totalMovies !== 0 && (
-          <h3 id="moviescount">{totalMovies} movies found</h3>
+          <span id="moviescount">{totalMovies} movies found</span>
         )}
         <div id="movielist">
           {showList &&
