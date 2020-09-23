@@ -6,6 +6,7 @@ class MovieDetails extends Component {
     const { movie } = this.props;
     return (
       <div>
+        {/* =========================================detailed movie component======================================== */}
         <div className="movieDetails">
           <img
             className="movieimage"

@@ -8,7 +8,7 @@ class Movie extends Component {
     };
   }
 
-// ===============================handler to show movie details=====================================
+  // ===============================handler to show movie details=====================================
 
   openDetails = () => {
     this.setState({
@@ -22,6 +22,8 @@ class Movie extends Component {
 
     return (
       <div id="movie-box">
+        {/* ==========================================components for separate movie card=============================== */}
+
         <div className="movieCard" onClick={this.openDetails}>
           <img
             className="movieimage"
@@ -31,7 +33,7 @@ class Movie extends Component {
           />
           <div className="firstinfo">
             <span className="moviename">Name: {movie.title}</span>
-            <br/>
+            <br />
             <span className="popularity">Popularity: {movie.popularity}</span>
           </div>
         </div>

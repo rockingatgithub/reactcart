@@ -69,6 +69,9 @@ class App extends Component {
             />
           </div>
         </div>
+
+        {/* =================================components for movies search list=============================================== */}
+
         {totalMovies !== 0 && (
           <span id="moviescount">{totalMovies} movies found</span>
         )}
